@@ -1,0 +1,30 @@
+import { makeStyles, Theme } from "@material-ui/core/styles";
+
+export const useStyles = makeStyles((theme: Theme) => ({
+  title: {
+    [theme.breakpoints.up("md")]: {
+      paddingTop: theme.spacing(10)
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: theme.spacing(15),
+      marginBottom: theme.spacing(3.5)
+    }
+  },
+  navigation: {
+    [theme.breakpoints.up("md")]: {
+      paddingTop: theme.spacing(6)
+    }
+  },
+  fixedContent: {
+    position: "fixed",
+    height: "100vh",
+    width: "50vw",
+    top: 0,
+    zIndex: 1,
+    left: "50vw",
+    textAlign: "center"
+  },
+  fixedImage: {
+    height: "100vh"
+  }
+}));
