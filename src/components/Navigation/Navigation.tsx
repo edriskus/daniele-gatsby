@@ -9,15 +9,15 @@ const links = [
     title: "home"
   },
   {
-    to: "/about",
+    to: "/about/",
     title: "about"
   },
   {
-    to: "/works",
+    to: "/works/",
     title: "works"
   },
   {
-    to: "/contact",
+    to: "/contact/",
     title: "contact"
   }
 ];

@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "krauze"
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

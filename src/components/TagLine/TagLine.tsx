@@ -11,10 +11,10 @@ export default function TagLine({ tags }: Props) {
   return (
     <Box className={classes.wrapper}>
       {tags.map((tag, i) => (
-        <>
+        <React.Fragment key={i}>
           <Typography variant="caption">{tag}</Typography>
           {i !== tags.length - 1 && <Box className={classes.divider} />}
-        </>
+        </React.Fragment>
       ))}
     </Box>
   );
