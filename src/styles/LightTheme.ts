@@ -1,42 +1,61 @@
-import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
 
-export default responsiveFontSizes(
-  createMuiTheme({
-    palette: {
-      type: "light"
-    },
-    typography: {
-      fontFamily: "'Montserrat', sans-serif",
-      body1: {
-        fontSize: 22
-      },
-      body2: {
+const theme = createMuiTheme({});
+
+export default createMuiTheme({
+  palette: {
+    type: "light",
+    primary: {
+      main: "#FF4040"
+    }
+  },
+  typography: {
+    fontFamily: "'Montserrat', sans-serif",
+    body1: {
+      fontSize: 22,
+      [theme.breakpoints.down("sm")]: {
         fontSize: 12,
         lineHeight: "20px"
-      },
-      button: {
-        fontSize: 16
-      },
-      h1: {
-        fontFamily: "'Playfair Display', serif",
-        fontSize: 120,
-        fontWeight: 700
-      },
-      h2: {
-        fontFamily: "'Playfair Display', serif",
-        fontSize: 100,
-        fontWeight: 700
       }
     },
-    overrides: {
-      MuiButton: {
-        root: {
-          textTransform: "none"
-        }
+    button: {
+      fontSize: 16
+    },
+    h1: {
+      fontFamily: "'Playfair Display', serif",
+      fontSize: 120,
+      fontWeight: 700,
+      [theme.breakpoints.down("sm")]: {
+        fontSize: 80
+      }
+    },
+    h2: {
+      fontFamily: "'Playfair Display', serif",
+      fontSize: 100,
+      fontWeight: 700,
+      [theme.breakpoints.down("sm")]: {
+        fontSize: 56
+      }
+    },
+    h4: {
+      fontWeight: 600,
+      fontSize: 26,
+      [theme.breakpoints.down("sm")]: {
+        fontSize: 18
+      }
+    },
+    caption: {
+      fontSize: 14,
+      [theme.breakpoints.down("sm")]: {
+        fontSize: 10
       }
     }
-  }),
-  {
-    factor: 1.625
+  },
+  overrides: {
+    MuiButton: {
+      root: {
+        textTransform: "none"
+      }
+    }
   }
-);
+});

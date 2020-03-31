@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
       width: "100vh",
       height: theme.spacing(9),
       flexDirection: "row-reverse",
-      bottom: -theme.spacing(9)
+      top: "100vh"
     }
   },
   active: {

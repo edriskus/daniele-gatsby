@@ -1,9 +1,16 @@
 import React, { PropsWithChildren } from "react";
-import { Grid, Typography, Box, useMediaQuery } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  Box,
+  useMediaQuery,
+  Hidden
+} from "@material-ui/core";
 import Navigation from "../Navigation/Navigation";
 import { useStyles } from "./Hello.styles";
 import { useTheme } from "@material-ui/core";
 import Img, { FluidObject } from "gatsby-image";
+import OverflowImg from "../OverflowImg/OverflowImg";
 
 interface Props {
   title: string;
@@ -30,18 +37,23 @@ export default function Hello({
           <Typography variant="h1" align="right" className={classes.title}>
             {title}
           </Typography>
-          <Typography variant={isMd ? "body1" : "body2"} align="justify">
+          <Typography variant="body1" align="justify">
             {story}
           </Typography>
+          <Hidden mdUp={true}>
+            {img != null && <OverflowImg img={img} alt={title} />}
+          </Hidden>
           {children}
         </Box>
       </Grid>
       <Grid item={true} xs={false} md={6}>
-        {img != null && (
-          <Box className={classes.fixedContent}>
-            <Img fluid={img} className={classes.fixedImage} />
-          </Box>
-        )}
+        <Hidden smDown={true}>
+          {img != null && (
+            <Box className={classes.fixedContent}>
+              <Img fluid={img} className={classes.fixedImage} />
+            </Box>
+          )}
+        </Hidden>
       </Grid>
     </Grid>
   );

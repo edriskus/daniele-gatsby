@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import SEO from "../components/SEO/SEO";
 import Hello from "../components/Hello/Hello";
 import { useStaticQuery, graphql } from "gatsby";
+import Blob from "../components/Blob/Blob";
 
 const query = graphql`
   query {
@@ -21,6 +22,7 @@ export default function() {
   return (
     <Layout>
       <SEO title="Home" />
+      <Blob color="lemon" xsX={-23} xsY={336} mdX={-37} mdY={478} />
       <Hello
         title="labas"
         img={data?.sandImage?.childImageSharp?.fluid}

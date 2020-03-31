@@ -3,11 +3,14 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme: Theme) => ({
   title: {
     [theme.breakpoints.up("md")]: {
-      paddingTop: theme.spacing(10)
+      paddingTop: theme.spacing(18),
+      marginBottom: theme.spacing(2)
     },
     [theme.breakpoints.down("sm")]: {
       paddingTop: theme.spacing(15),
-      marginBottom: theme.spacing(3.5)
+      marginBottom: theme.spacing(3.5),
+      width: "calc(100% + 20vw)",
+      transform: "translateX(-20vw)"
     }
   },
   navigation: {
