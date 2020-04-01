@@ -12,9 +12,9 @@ export default createMuiTheme({
   typography: {
     fontFamily: "'Montserrat', sans-serif",
     body1: {
-      fontSize: 22,
+      fontSize: 18,
       [theme.breakpoints.down("sm")]: {
-        fontSize: 12,
+        fontSize: 14,
         lineHeight: "20px"
       }
     },

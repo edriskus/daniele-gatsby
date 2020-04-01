@@ -11,6 +11,7 @@ import { useStyles } from "./Hello.styles";
 import { useTheme } from "@material-ui/core";
 import Img, { FluidObject } from "gatsby-image";
 import OverflowImg from "../OverflowImg/OverflowImg";
+import { TransitionPortal } from "gatsby-plugin-transition-link";
 
 interface Props {
   title: string;
@@ -49,9 +50,11 @@ export default function Hello({
       <Grid item={true} xs={false} md={6}>
         <Hidden smDown={true}>
           {img != null && (
-            <Box className={classes.fixedContent}>
-              <Img fluid={img} className={classes.fixedImage} />
-            </Box>
+            <TransitionPortal level="top">
+              <Box className={classes.fixedContent}>
+                <Img fluid={img} className={classes.fixedImage} />
+              </Box>
+            </TransitionPortal>
           )}
         </Hidden>
       </Grid>

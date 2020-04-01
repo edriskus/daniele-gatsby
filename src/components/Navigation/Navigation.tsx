@@ -1,36 +1,45 @@
 import React from "react";
-import { Button, Grid, Box } from "@material-ui/core";
-import { Link } from "gatsby";
+import { Button, Grid, Box, useTheme, useMediaQuery } from "@material-ui/core";
 import { useStyles } from "./Navigation.styles";
+import AniRefButton from "../AniRefButton/AniRefButton";
 
 const links = [
   {
     to: "/",
-    title: "home"
+    title: "home",
+    bg: "#F9DF82"
   },
   {
     to: "/about/",
-    title: "about"
+    title: "about",
+    bg: "#4E9CB5"
   },
   {
     to: "/works/",
-    title: "works"
+    title: "works",
+    bg: "#FF4040"
   },
   {
     to: "/contact/",
-    title: "contact"
+    title: "contact",
+    bg: "#F9DF82"
   }
 ];
 
 export default function Navigation() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Grid container={true} className={classes.wrapper} spacing={2}>
       {links.map((link, i) => (
         <Grid item={true} key={i}>
           <Box paddingX={1}>
             <Button
-              component={Link}
+              component={AniRefButton}
+              paintDrip={true}
+              duration={isMd ? 0.75 : 0.5}
+              hex={link.bg}
               to={link.to}
               variant="text"
               color="default"

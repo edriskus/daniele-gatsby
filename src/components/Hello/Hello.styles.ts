@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
       marginBottom: theme.spacing(2)
     },
     [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(15),
+      paddingTop: theme.spacing(8),
       marginBottom: theme.spacing(3.5),
       width: "calc(100% + 20vw)",
       transform: "translateX(-20vw)"
