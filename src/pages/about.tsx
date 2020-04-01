@@ -27,8 +27,8 @@ export default function() {
     <Layout>
       <SEO title="About" />
       <Blob color="sea" xsX={221} xsY={115} mdX={459} mdY={146} />
-      <Blob color="lips" xsX={-41} xsY={948} mdX={459} mdY={146} />
-      <Blob color="lemon" xsX={231} xsY={1449} mdX={459} mdY={146} />
+      <Blob color="lips" xsX={-41} xsY={948} mdX={-40} mdY={1230} />
+      <Blob color="lemon" xsX={231} xsY={1449} mdX={448} mdY={1804} />
       <Hello
         title="Danielė"
         img={data?.danieleImage?.childImageSharp?.fluid}

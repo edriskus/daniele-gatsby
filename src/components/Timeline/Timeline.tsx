@@ -12,7 +12,7 @@ export default function Timeline({ events }: Props) {
   const classes = useStyles();
   return (
     <Grid container={true} wrap="nowrap">
-      <Grid item={true}>
+      <Grid item={true} className={classes.eventsGrid}>
         {events.map((event, i) => (
           <Box className={classes.eventWrapper} key={i}>
             <Box

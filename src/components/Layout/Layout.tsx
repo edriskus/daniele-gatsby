@@ -3,6 +3,7 @@ import React, { PropsWithChildren } from "react";
 import LightTheme from "../../styles/LightTheme";
 import { Container, ThemeProvider, CssBaseline } from "@material-ui/core";
 import { useStyles } from "./Layout.styles";
+import "../../styles/overrides.css";
 
 export default function({ children }: PropsWithChildren<{}>) {
   const classes = useStyles();

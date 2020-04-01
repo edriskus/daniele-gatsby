@@ -14,6 +14,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
     maxWidth: 60,
     justifyContent: "center"
   },
+  eventsGrid: {
+    flexGrow: 1
+  },
   eventWrapper: {
     paddingBottom: theme.spacing(3),
     position: "relative",
@@ -32,19 +35,31 @@ export const useStyles = makeStyles((theme: Theme) => ({
   bigDot: {
     position: "absolute",
     top: 0,
-    right: -37,
-    width: 14,
-    height: 14,
+    right: -40,
+    width: 20,
+    height: 20,
+    [theme.breakpoints.down("sm")]: {
+      top: 0,
+      right: -37,
+      width: 14,
+      height: 14
+    },
     borderRadius: "50%",
     background: theme.palette.primary.contrastText,
     border: `2px solid ${theme.palette.primary.main}`
   },
   mediumDot: {
     position: "absolute",
-    top: 2,
-    right: -35,
-    width: 10,
-    height: 10,
+    top: 4,
+    right: -36,
+    width: 12,
+    height: 12,
+    [theme.breakpoints.down("sm")]: {
+      top: 2,
+      right: -35,
+      width: 10,
+      height: 10
+    },
     borderRadius: "50%",
     background: theme.palette.primary.main
   }
