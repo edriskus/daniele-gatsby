@@ -5,9 +5,9 @@ import Hello from "../components/Hello/Hello";
 import { useStaticQuery, graphql } from "gatsby";
 import Blob from "../components/Blob/Blob";
 import Section from "../components/Section/Section";
-import { Typography } from "@material-ui/core";
 import Post from "../components/Post/Post";
 import Timeline from "../components/Timeline/Timeline";
+import Skills from "../components/Skills/Skills";
 
 const query = graphql`
   query {
@@ -70,14 +70,16 @@ export default function() {
           />
         </Section>
         <Section title="skills">
-          <Typography variant="body1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis
-            ut ridiculus ipsum sit. Pulvinar porta sem ut sit. Velit non
-            vulputate suspendisse sodales aliquam eget sed etiam. Amet diam sed
-            mi porttitor. Tincidunt vel eget posuere mi nisl elementum maecenas
-            quis lacinia. Duis mattis pulvinar felis, sed adipiscing venenatis
-            sem aliquet volutpat.
-          </Typography>
+          <Skills
+            skills={[
+              { type: "primary", strength: 4, title: "Adobe Illustrator" },
+              { type: "primary", strength: 4, title: "Adobe Photoshop" },
+              { type: "primary", strength: 4, title: "Adobe Xd" },
+              { type: "primary", strength: 4, title: "Figma" },
+              { type: "secondary", strength: 3, title: "Adobe InDesign" },
+              { type: "secondary", strength: 3, title: "Adobe Lightroom" }
+            ]}
+          />
         </Section>
       </Hello>
     </Layout>

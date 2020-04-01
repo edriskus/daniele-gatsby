@@ -7,6 +7,9 @@ export default createMuiTheme({
     type: "light",
     primary: {
       main: "#FF4040"
+    },
+    secondary: {
+      main: "#4E9CB5"
     }
   },
   typography: {
@@ -48,6 +51,16 @@ export default createMuiTheme({
       fontSize: 14,
       [theme.breakpoints.down("sm")]: {
         fontSize: 10
+      }
+    },
+    subtitle1: {
+      fontWeight: 500,
+      fontSize: 22,
+      lineHeight: "27px",
+      [theme.breakpoints.down("sm")]: {
+        fontWeight: 500,
+        fontSize: 16,
+        lineHeight: "20px"
       }
     },
     subtitle2: {
