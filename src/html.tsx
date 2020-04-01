@@ -12,7 +12,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <link
-          href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Playfair+Display:700&display=swap&subset=latin-ext"
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Playfair+Display:700&display=swap&subset=latin-ext"
           rel="stylesheet"
         />
         <link

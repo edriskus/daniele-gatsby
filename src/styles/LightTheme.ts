@@ -49,6 +49,11 @@ export default createMuiTheme({
       [theme.breakpoints.down("sm")]: {
         fontSize: 10
       }
+    },
+    subtitle2: {
+      fontWeight: 500,
+      fontSize: 12,
+      lineHeight: "15px"
     }
   },
   overrides: {
