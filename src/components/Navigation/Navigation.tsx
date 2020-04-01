@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Grid, Box, useTheme, useMediaQuery } from "@material-ui/core";
 import { useStyles } from "./Navigation.styles";
 import AniRefButton from "../AniRefButton/AniRefButton";
+import { TransitionPortal } from "gatsby-plugin-transition-link";
 
 const links = [
   {
@@ -30,26 +31,29 @@ export default function Navigation() {
   const classes = useStyles();
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up("md"));
+  const Wrapper = isMd ? Box : TransitionPortal;
   return (
-    <Grid container={true} className={classes.wrapper} spacing={2}>
-      {links.map((link, i) => (
-        <Grid item={true} key={i}>
-          <Box paddingX={1}>
-            <Button
-              component={AniRefButton}
-              paintDrip={true}
-              duration={isMd ? 0.75 : 0.5}
-              hex={link.bg}
-              to={link.to}
-              variant="text"
-              color="default"
-              activeClassName={classes.active}
-            >
-              {link.title}
-            </Button>
-          </Box>
-        </Grid>
-      ))}
-    </Grid>
+    <Wrapper>
+      <Grid container={true} className={classes.wrapper} spacing={2}>
+        {links.map((link, i) => (
+          <Grid item={true} key={i}>
+            <Box paddingX={1}>
+              <Button
+                component={AniRefButton}
+                paintDrip={true}
+                duration={isMd ? 0.6 : 0.4}
+                hex={link.bg}
+                to={link.to}
+                variant="text"
+                color="default"
+                activeClassName={classes.active}
+              >
+                {link.title}
+              </Button>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+    </Wrapper>
   );
 }
