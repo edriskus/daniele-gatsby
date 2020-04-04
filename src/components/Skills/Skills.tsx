@@ -30,6 +30,7 @@ export default function Skills({ skills }: Props) {
                       marginX={`${Math.floor(
                         (size * 1.5 - Math.floor(size * m)) / 2
                       )}px`}
+                      style={{ opacity: m }}
                       className={clsx({
                         [classes.primaryDot]: skill.type === "primary",
                         [classes.secondaryDot]: skill.type === "secondary"

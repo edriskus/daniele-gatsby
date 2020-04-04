@@ -6,7 +6,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-material-ui`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        pathToStylesProvider: `src/styles/Provider`
+      }
+    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     {
