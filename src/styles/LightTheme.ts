@@ -10,6 +10,9 @@ export default createMuiTheme({
     },
     secondary: {
       main: "#4E9CB5"
+    },
+    text: {
+      secondary: "rgba(0,0,0,.5)"
     }
   },
   typography: {
@@ -19,6 +22,13 @@ export default createMuiTheme({
       [theme.breakpoints.down("sm")]: {
         fontSize: 14,
         lineHeight: "20px"
+      }
+    },
+    body2: {
+      fontSize: 18,
+      [theme.breakpoints.down("sm")]: {
+        fontSize: 12,
+        lineHeight: "15px"
       }
     },
     button: {
@@ -69,7 +79,7 @@ export default createMuiTheme({
       lineHeight: "27px",
       [theme.breakpoints.down("sm")]: {
         fontWeight: 500,
-        fontSize: 12,
+        fontSize: 14,
         lineHeight: "15px"
       }
     }
