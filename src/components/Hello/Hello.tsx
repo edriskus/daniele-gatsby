@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, ReactNode } from "react";
 import {
   Grid,
   Typography,
@@ -16,6 +16,7 @@ import { TransitionPortal } from "gatsby-plugin-transition-link";
 interface Props {
   title: string;
   story: string;
+  featured?: ReactNode;
   img?: FluidObject | FluidObject[];
 }
 
@@ -23,6 +24,7 @@ export default function Hello({
   img,
   title,
   story,
+  featured,
   children
 }: PropsWithChildren<Props>) {
   const classes = useStyles();
@@ -41,6 +43,7 @@ export default function Hello({
           <Typography variant="body1" align="justify">
             {story}
           </Typography>
+          {featured}
           <Hidden mdUp={true}>
             {img != null && <OverflowImg img={img} alt={title} />}
           </Hidden>

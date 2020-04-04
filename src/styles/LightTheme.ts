@@ -89,6 +89,11 @@ export default createMuiTheme({
       root: {
         textTransform: "none"
       }
+    },
+    MuiFilledInput: {
+      root: {
+        background: "none !important"
+      }
     }
   }
 });

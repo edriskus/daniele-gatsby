@@ -4,6 +4,7 @@ import SEO from "../components/SEO/SEO";
 import Hello from "../components/Hello/Hello";
 import { useStaticQuery, graphql } from "gatsby";
 import Blob from "../components/Blob/Blob";
+import Contact from "../components/Contact/Contact";
 
 const query = graphql`
   query {
@@ -29,7 +30,8 @@ export default function() {
         story={`
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis ut ridiculus ipsum sit.
         `}
-      />
+        featured={<Contact />}
+      ></Hello>
     </Layout>
   );
 }
