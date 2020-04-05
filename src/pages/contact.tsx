@@ -28,10 +28,11 @@ export default function() {
         title="contact"
         img={data?.birdsImage?.childImageSharp?.fluid}
         story={`
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis ut ridiculus ipsum sit.
+          So, the last thing - if you are impressed with my works, you can leave me a message. 
+          “I’ll be there for YOU! :)”
         `}
         featured={<Contact />}
-      ></Hello>
+      />
     </Layout>
   );
 }

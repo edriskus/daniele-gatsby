@@ -26,17 +26,29 @@ export default function() {
   return (
     <Layout>
       <SEO title="About" />
-      <Blob color="sea" xsX={221} xsY={115} mdX={459} mdY={146} />
-      <Blob color="lips" xsX={-41} xsY={948} mdX={-40} mdY={1230} />
-      <Blob color="lemon" xsX={231} xsY={1449} mdX={448} mdY={1804} />
+      <Blob color="sea" xsX={221} xsY={35} mdX={459} mdY={146} />
+      <Blob color="lips" xsX={-41} xsY={1148} mdX={-40} mdY={1230} />
+      <Blob color="lemon" xsX={231} xsY={1749} mdX={448} mdY={1804} />
       <Hello
         title="Danielė"
+        bottomNavigation={true}
         img={data?.danieleImage?.childImageSharp?.fluid}
         story={`
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis ut ridiculus ipsum sit. 
-          Pulvinar porta sem ut sit. Velit non vulputate suspendisse sodales aliquam eget sed etiam. Amet diam sed mi porttitor. 
-          Tincidunt vel eget posuere mi nisl elementum maecenas quis lacinia. 
-          Duis mattis pulvinar felis, sed adipiscing venenatis sem aliquet volutpat.
+          Okay, my name is Daniele. I am working, studying and living in Vilnius. 
+          Four things which can describe me - Photography, Music, WEB and Graphic design. 
+          I am very interested in photography, especially using film. 
+          <br/><br/>
+          Music takes a really big part in my life. Unfortunately, 
+          I am not singing or playing any kind of instrument. 
+          However, I am a vinyl collector. My goal is to collect all LPs of Pink Floyd. 
+          I am a huge fan of this band. Sometimes I think that I should be born in 60s, 
+          because I live in the rhythm of 70s - 80s. 
+          <br/><br/>
+          The last two things  - WEB and Graphic design. These things were my hobbies. 
+          I thought that I will be a bioengineer because I was studying this discipline. 
+          But in the 2nd course of studies, I realised that I don’t want to work in laboratories. 
+          So, I thought that I should spend more of my free time to expand my knowledge in graphic and WEB design. 
+          So, that’s how I became a graphic - UI/UX designer. 
         `}
       >
         <Section title="education">
@@ -60,12 +72,12 @@ export default function() {
             title="Graphic Designer"
             tags={["Teltonika", "Full time", "2019 - Current"]}
             story={`
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Venenatis ut ridiculus ipsum sit. Pulvinar porta sem ut sit. 
-              Velit non vulputate suspendisse sodales aliquam eget sed etiam. 
-              Amet diam sed mi porttitor. Tincidunt vel eget posuere mi nisl 
-              elementum maecenas quis lacinia. Duis mattis pulvinar felis, 
-              sed adipiscing venenatis sem aliquet volutpat.
+              Currently, I am working as Graphic Designer in one of the biggest IoT companies of Lithuania - Teltonika. 
+              During this time, I’ve done various projects - from booths of exhibitions designs to WEB design. 
+              The main projects were designs of banners, datasheets, catalogues, 
+              exhibitions booths and drawings of topologies, icons and illustrations. 
+              Recently, I am creating the WEB design of control system of devices. 
+              I am using the specifications of  Material UI to create user friendly system. 
             `}
           />
         </Section>

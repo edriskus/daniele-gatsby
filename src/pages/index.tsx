@@ -27,10 +27,11 @@ export default function() {
         title="labas"
         img={data?.sandImage?.childImageSharp?.fluid}
         story={`
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis ut ridiculus ipsum sit. 
-          Pulvinar porta sem ut sit. Velit non vulputate suspendisse sodales aliquam eget sed etiam. Amet diam sed mi porttitor. 
-          Tincidunt vel eget posuere mi nisl elementum maecenas quis lacinia. 
-          Duis mattis pulvinar felis, sed adipiscing venenatis sem aliquet volutpat.
+          I don’t want to introduce myself in the first page of portfolio. 
+          That’s because when I talk with person for the first time, 
+          the first word actually is labas. Labas is hello in my native language - Lithuanian. 
+          I thought you should know this. As I mentioned before, 
+          this is my portfolio based on WEB designs and some graphic design elements. 
         `}
       />
     </Layout>

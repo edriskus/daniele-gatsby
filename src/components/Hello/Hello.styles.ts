@@ -18,6 +18,12 @@ export const useStyles = makeStyles((theme: Theme) => ({
       paddingTop: theme.spacing(6)
     }
   },
+  bottomNavigation: {
+    [theme.breakpoints.up("md")]: {
+      paddingTop: theme.spacing(18),
+      paddingBottom: theme.spacing(6)
+    }
+  },
   fixedContent: {
     position: "fixed",
     height: "100vh",
@@ -29,5 +35,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   fixedImage: {
     height: "100vh"
+  },
+  hidden: {
+    visibility: "hidden"
   }
 }));
