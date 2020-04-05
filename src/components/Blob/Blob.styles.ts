@@ -1,10 +1,13 @@
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme: Theme) => ({
-  blob: {
-    borderRadius: "50%",
+  wrapper: {
     position: "absolute",
-    zIndex: -1,
+    zIndex: -1
+  },
+  blob: {
+    position: "relative",
+    borderRadius: "50%",
     [theme.breakpoints.down("sm")]: {
       width: 193,
       height: 193

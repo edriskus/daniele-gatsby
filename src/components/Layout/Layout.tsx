@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import { useStyles } from "./Layout.styles";
 import "../../styles/overrides.css";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const SSRTheme = createMuiTheme(LightTheme);
 
@@ -25,11 +26,13 @@ export default function({ children }: PropsWithChildren<{}>) {
   const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth="lg" className={classes.container}>
-        {children}
-      </Container>
-    </ThemeProvider>
+    <ParallaxProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Container maxWidth="lg" className={classes.container}>
+          {children}
+        </Container>
+      </ThemeProvider>
+    </ParallaxProvider>
   );
 }
