@@ -26,9 +26,9 @@ export default function() {
   return (
     <Layout>
       <SEO title="About" />
-      <Blob color="sea" xsX={221} xsY={35} mdX={459} mdY={146} />
-      <Blob color="lips" xsX={-41} xsY={1148} mdX={-40} mdY={1230} />
-      <Blob color="lemon" xsX={231} xsY={1749} mdX={448} mdY={1804} />
+      <Blob color="sea" xsX={87} xsY={35} mdX={40} mdY={146} />
+      <Blob color="lips" xsX={15} xsY={1148} mdX={7} mdY={1230} />
+      <Blob color="lemon" xsX={90} xsY={1749} mdX={43} mdY={1804} />
       <Hello
         title="Danielė"
         bottomNavigation={true}

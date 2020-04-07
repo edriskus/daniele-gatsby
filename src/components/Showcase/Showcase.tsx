@@ -14,13 +14,17 @@ import { ArrowRightAlt } from "@material-ui/icons";
 export interface Props {
   title: string;
   type: string;
+  link: string;
   subtitle: string;
   img?: FluidObject | FluidObject[];
   story: string;
 }
 
 export default forwardRef(
-  ({ type, subtitle, img, story, title }: Props, ref: Ref<HTMLElement>) => {
+  (
+    { type, subtitle, img, story, title, link }: Props,
+    ref: Ref<HTMLElement>
+  ) => {
     const theme = useTheme();
     const isMd = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -48,7 +52,13 @@ export default forwardRef(
           justifyContent={isMd ? "flex-end" : "flex-start"}
           marginX={-1}
         >
-          <Button variant="text" color="primary">
+          <Button
+            variant="text"
+            color="primary"
+            component="a"
+            href={link}
+            target="_blank"
+          >
             Check it out
             <Box marginLeft={1} display="flex" alignItems="center">
               <ArrowRightAlt />

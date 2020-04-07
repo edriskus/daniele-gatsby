@@ -3,5 +3,6 @@ export interface Work {
   type: string;
   subtitle: string;
   cover: string;
+  link: string;
   story: string;
 }

@@ -27,7 +27,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
   fixedContent: {
     position: "fixed",
     height: "100vh",
-    width: "50vw",
+    width: `50vw`,
+    maxWidth: theme.breakpoints.values.lg / 2 + 150,
     top: 0,
     zIndex: 1,
     left: "50vw",

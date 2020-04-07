@@ -14,6 +14,7 @@ const works: Work[] = [
   {
     title: "OmNiam",
     type: "Mobile App",
+    link: "/pdfs/OmNiam-Presentation.pdf",
     subtitle:
       "OnNiam - clear solution to find, try and share recipes in a couple of taps.",
     cover: "omniamMobile",
@@ -25,6 +26,7 @@ const works: Work[] = [
   {
     title: "OmNiam",
     type: "Admin Panel",
+    link: "/pdfs/OmNiam-AdminPanel-Presentation.pdf",
     subtitle:
       "OnNiam - clear solution to find, try and share recipes in a couple of taps.",
     cover: "omniamAdmin",
@@ -39,6 +41,7 @@ const works: Work[] = [
   {
     title: "Quaractive",
     type: "Web App",
+    link: "https://www.quaractive.com/",
     subtitle:
       "The web application for those who unexpectedly for them ended up locked up at their homes.",
     cover: "quaractive",
@@ -120,9 +123,9 @@ export default function() {
   return (
     <Layout>
       <SEO title="Works" />
-      <Blob color="lips" xsX={214} xsY={363} mdX={459} mdY={146} />
-      <Blob color="lemon" xsX={-23} xsY={981} mdX={-68} mdY={1078} />
-      <Blob color="sea" xsX={207} xsY={2245} mdX={537} mdY={1682} />
+      <Blob color="lips" xsX={87} xsY={363} mdX={40} mdY={146} />
+      <Blob color="sea" xsX={15} xsY={981} mdX={7} mdY={1078} />
+      <Blob color="lemon" xsX={90} xsY={2245} mdX={43} mdY={1682} />
       <Hello
         title="works"
         bottomNavigation={true}
@@ -143,6 +146,7 @@ export default function() {
               component={memoShowcase}
               title={work.title}
               type={work.type}
+              link={work.link}
               subtitle={work.subtitle}
               img={data?.[work.cover]?.childImageSharp?.fluid}
               story={work.story}

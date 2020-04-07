@@ -6,9 +6,9 @@ import { useTheme } from "@material-ui/core";
 import { Parallax } from "react-scroll-parallax";
 
 interface Props {
-  xsX: number;
+  xsX: number; // Percent
   xsY: number;
-  mdX: number;
+  mdX: number; // Percent
   mdY: number;
   parallax?: number;
   color: "sea" | "lips" | "lemon";
@@ -25,11 +25,22 @@ export default function Blob({
   const classes = useStyles();
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up("md"));
+  const isLg = useMediaQuery(theme.breakpoints.up("lg"));
+
+  const y = isMd ? mdY : xsY;
+
+  const lgX = `calc((100vw - ${theme.breakpoints.values.lg}px) / 2 + ${(theme
+    .breakpoints.values.lg /
+    100) *
+    mdX}px)`;
+
+  const x = isMd ? (isLg ? lgX : `${mdX}vw`) : `${xsX}vw`;
+
   return (
     <Box
       className={classes.wrapper}
-      top={isMd ? mdY : xsY}
-      left={isMd ? mdX : xsX}
+      top={y}
+      left={`calc(${x} - ${isMd ? 315 / 2 : 193 / 2}px)`}
     >
       <Parallax y={[-parallax, parallax]}>
         <Box

@@ -22,7 +22,7 @@ export default function() {
   return (
     <Layout>
       <SEO title="Home" />
-      <Blob color="lemon" xsX={-23} xsY={336} mdX={-37} mdY={478} />
+      <Blob color="lemon" xsX={15} xsY={336} mdX={7} mdY={478} />
       <Hello
         title="labas"
         img={data?.sandImage?.childImageSharp?.fluid}
