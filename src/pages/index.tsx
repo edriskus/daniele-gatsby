@@ -21,17 +21,26 @@ export default function() {
   const data = useStaticQuery(query);
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title="Labas"
+        url="https://daniele.krauze.lt/"
+        img="seo/sand.jpeg"
+        description={`
+          It means "hello" in my native language - Lithuanian.
+          This is my portfolio based on web designs and some graphic design elements. 
+      `}
+      />
       <Blob color="lemon" xsX={15} xsY={336} mdX={7} mdY={478} />
       <Hello
         title="labas"
         img={data?.sandImage?.childImageSharp?.fluid}
         story={`
-          I don’t want to introduce myself in the first page of portfolio. 
-          That’s because when I talk with person for the first time, 
-          the first word actually is labas. Labas is hello in my native language - Lithuanian. 
-          I thought you should know this. As I mentioned before, 
-          this is my portfolio based on WEB designs and some graphic design elements. 
+          is the first word of my portfolio. When I talk with a person for the first time, 
+          before I introduce myself, I always start with "labas". 
+          It means "hello" in my native language - Lithuanian and
+          I just thought you should know this. 
+          <br/><br/>
+          As I mentioned before, this is my portfolio based on web designs and some graphic design elements. 
         `}
       />
     </Layout>

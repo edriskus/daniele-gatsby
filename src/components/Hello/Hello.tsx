@@ -99,6 +99,7 @@ export default function Hello({
                   >
                     <Img
                       fluid={prevImg}
+                      alt={title}
                       className={classes.fixedImage}
                       imgStyle={{
                         objectFit: imgFit
@@ -117,6 +118,7 @@ export default function Hello({
                 <Box className={classes.fixedContent}>
                   <Img
                     fluid={img}
+                    alt={title}
                     className={classes.fixedImage}
                     imgStyle={{
                       objectFit: imgFit

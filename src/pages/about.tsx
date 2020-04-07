@@ -23,9 +23,19 @@ const query = graphql`
 
 export default function() {
   const data = useStaticQuery(query);
+  console.log(data?.danieleImage?.childImageSharp);
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO
+        title="About"
+        img="seo/daniele.jpeg"
+        url="https://daniele.krauze.lt/about/"
+        description={`
+          Okay, my name is Danielė. 
+          Four things that describe me best: Photography (especially using analog film), 
+          Music, web and Graphic design.  
+      `}
+      />
       <Blob color="sea" xsX={87} xsY={35} mdX={40} mdY={146} />
       <Blob color="lips" xsX={15} xsY={1148} mdX={7} mdY={1230} />
       <Blob color="lemon" xsX={90} xsY={1749} mdX={43} mdY={1804} />
@@ -34,21 +44,19 @@ export default function() {
         bottomNavigation={true}
         img={data?.danieleImage?.childImageSharp?.fluid}
         story={`
-          Okay, my name is Daniele. I am working, studying and living in Vilnius. 
-          Four things which can describe me - Photography, Music, WEB and Graphic design. 
-          I am very interested in photography, especially using film. 
+          Okay, my name is Danielė. I am working, studying and living in Vilnius. 
+          Four things that describe me best: Photography (especially using analog film), 
+          Music, web and Graphic design. 
           <br/><br/>
-          Music takes a really big part in my life. Unfortunately, 
-          I am not singing or playing any kind of instrument. 
-          However, I am a vinyl collector. My goal is to collect all LPs of Pink Floyd. 
-          I am a huge fan of this band. Sometimes I think that I should be born in 60s, 
-          because I live in the rhythm of 70s - 80s. 
+          Music is a huge part of my life - to support my favourite bands I collect vinyl records. 
+          My goal is to collect all LPs of Pink Floyd, because I just adore this band. 
+          Sometimes I think that I should've been born in 60s, because I live in the rhythm of 70s - 80s. 
           <br/><br/>
-          The last two things  - WEB and Graphic design. These things were my hobbies. 
-          I thought that I will be a bioengineer because I was studying this discipline. 
-          But in the 2nd course of studies, I realised that I don’t want to work in laboratories. 
-          So, I thought that I should spend more of my free time to expand my knowledge in graphic and WEB design. 
-          So, that’s how I became a graphic - UI/UX designer. 
+          Then, there's web and Graphic design - my long-time hobby.
+          At first I thought that I would be a bioengineer because I was studying this discipline. 
+          But in the 2nd course of studies, I realised that I don’t want to work in a laboratory. 
+          So, I thought I should spend more of my free time to expand my knowledge in graphic and web design. 
+          So, that’s the story of how I became a graphic - UI/UX designer. 
         `}
       >
         <Section title="education">
@@ -72,12 +80,11 @@ export default function() {
             title="Graphic Designer"
             tags={["Teltonika", "Full time", "2019 - Current"]}
             story={`
-              Currently, I am working as Graphic Designer in one of the biggest IoT companies of Lithuania - Teltonika. 
-              During this time, I’ve done various projects - from booths of exhibitions designs to WEB design. 
-              The main projects were designs of banners, datasheets, catalogues, 
-              exhibitions booths and drawings of topologies, icons and illustrations. 
-              Recently, I am creating the WEB design of control system of devices. 
-              I am using the specifications of  Material UI to create user friendly system. 
+              Currently, I am working as a Graphic Designer in one of the biggest IoT companies of Lithuania - Teltonika. 
+              During this time, I’ve done various projects - from exhibition booth designs to web prototypes. 
+              I've also designed banners, datasheets, catalogues, drawings of topologies, icons and illustrations. 
+              Recently, I've been creating the web design of a device control system,
+              based on Material Design language for better user experience and accessibility.
             `}
           />
         </Section>

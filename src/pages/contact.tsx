@@ -22,7 +22,15 @@ export default function() {
   const data = useStaticQuery(query);
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO
+        title="Contact"
+        url="https://daniele.krauze.lt/contact/"
+        description={`
+          So, the last thing - if you are impressed with my works, you can leave me a message. 
+          “I’ll be there for YOU! :)”
+        `}
+        img="seo/birds.jpeg"
+      />
       <Blob color="lemon" xsX={15} xsY={336} mdX={7} mdY={538} />
       <Hello
         title="contact"

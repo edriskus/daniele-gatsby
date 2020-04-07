@@ -10,13 +10,14 @@ import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 interface Props {
-  description?: string;
-  lang?: string;
-  meta?: Array<{ name: string; content: string }>;
+  description: string;
   title: string;
+  url: string;
+  img: string;
+  meta?: Array<{ name: string; content: string }>;
 }
 
-const SEO: React.FC<Props> = ({ description, lang, meta = [], title }) => {
+const SEO: React.FC<Props> = ({ description, meta = [], title, img, url }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -31,19 +32,17 @@ const SEO: React.FC<Props> = ({ description, lang, meta = [], title }) => {
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
-
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang: "en"
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription
+          content: description
         },
         {
           property: `og:title`,
@@ -51,7 +50,15 @@ const SEO: React.FC<Props> = ({ description, lang, meta = [], title }) => {
         },
         {
           property: `og:description`,
-          content: metaDescription
+          content: description
+        },
+        {
+          property: `og:url`,
+          content: url
+        },
+        {
+          property: `og:image`,
+          content: url + img
         },
         {
           property: `og:type`,
@@ -71,7 +78,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta = [], title }) => {
         },
         {
           name: `twitter:description`,
-          content: metaDescription
+          content: description
         }
       ].concat(meta)}
     />

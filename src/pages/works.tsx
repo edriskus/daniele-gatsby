@@ -31,7 +31,7 @@ const works: Work[] = [
       "OnNiam - clear solution to find, try and share recipes in a couple of taps.",
     cover: "omniamAdmin",
     story: `
-      The main goal was to learn how to design more difficult WEB systems like admin panel. 
+      The main goal was to learn how to design more difficult web systems like admin panel. 
       In this system I’ve created dashboard and table of all recipes. 
       This admin panel has two colour modes - dark and light. 
       The mode depends on OS colour mode which user is using. 
@@ -43,14 +43,14 @@ const works: Work[] = [
     type: "Web App",
     link: "https://www.quaractive.com/",
     subtitle:
-      "The web application for those who unexpectedly for them ended up locked up at their homes.",
+      "A web app that helps to maintain mental health, daily routines and stay socially connected",
     cover: "quaractive",
     story: `
       This web app was created during online hackathon - Hack the Crisis, which took place in 20 - 22nd of March. 
       The main goal of this app was to help users to maintain heir mental health, 
       daily routines and stay connected to their social circles in a fun and positive way even during quarantine. 
-      The WEB app is responsive for all three types of devices - mobile, tablet and desktop. 
-      The design was created using progressive enhancement principle. 
+      The web app is responsive for all three types of devices - mobile, tablet and desktop. 
+      The design was created using mobile-first principle. 
     `
   }
 ];
@@ -122,7 +122,15 @@ export default function() {
 
   return (
     <Layout>
-      <SEO title="Works" />
+      <SEO
+        title="Works"
+        url="https://daniele.krauze.lt/works/"
+        description={`
+          I am really interested in web design, 
+          especially the latest trends of graphic elements, colours and design systems. 
+      `}
+        img="seo/omniamMobile.jpeg"
+      />
       <Blob color="lips" xsX={87} xsY={363} mdX={40} mdY={146} />
       <Blob color="sea" xsX={15} xsY={981} mdX={7} mdY={1078} />
       <Blob color="lemon" xsX={90} xsY={2245} mdX={43} mdY={1682} />
@@ -132,11 +140,11 @@ export default function() {
         imgFit="contain"
         img={isMd ? data?.[closestImage]?.childImageSharp?.fluid : null}
         story={`
-          As I mentioned before, I am really interested in WEB design during my free time. 
-          Especially in the latest trends of graphic elements, colours and design systems. 
-          Also, I just love when WEB design is user friendly. 
+          As I mentioned before, I am really interested in web design, 
+          especially the latest trends of graphic elements, colours and design systems. 
+          Also, I just love when websites are user friendly. 
           <br/><br/>
-          All of my examples, which you will find above, are created using specifications of Material UI.
+          All of my personal projects (which you will find below) are created using the Material Dasign language.
         `}
       >
         {works.map((work, i) => (
