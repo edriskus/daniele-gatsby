@@ -8,7 +8,7 @@ import { Work } from "../utils/Work";
 import Showcase from "../components/Showcase/Showcase";
 import { useStaticQuery, graphql } from "gatsby";
 import PositionListener from "../components/PositionListener/PositionListener";
-import { useTheme, useMediaQuery } from "@material-ui/core";
+import { useTheme, useMediaQuery, Box } from "@material-ui/core";
 
 const works: Work[] = [
   {
@@ -148,18 +148,20 @@ export default function() {
         `}
       >
         {works.map((work, i) => (
-          <Section title={work.title} key={i}>
-            <PositionListener
-              reportPosition={handleWorkPosition(work)}
-              component={memoShowcase}
-              title={work.title}
-              type={work.type}
-              link={work.link}
-              subtitle={work.subtitle}
-              img={data?.[work.cover]?.childImageSharp?.fluid}
-              story={work.story}
-            />
-          </Section>
+          <Box paddingTop={isMd ? 10 : 0} key={i}>
+            <Section title={work.title}>
+              <PositionListener
+                reportPosition={handleWorkPosition(work)}
+                component={memoShowcase}
+                title={work.title}
+                type={work.type}
+                link={work.link}
+                subtitle={work.subtitle}
+                img={data?.[work.cover]?.childImageSharp?.fluid}
+                story={work.story}
+              />
+            </Section>
+          </Box>
         ))}
       </Hello>
     </Layout>

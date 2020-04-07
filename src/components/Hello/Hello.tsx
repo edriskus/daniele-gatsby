@@ -54,7 +54,7 @@ export default function Hello({
   return (
     <Grid container={true} justify="flex-end">
       <Grid item={true} xs={9} md={6}>
-        <Box paddingX={isMd ? 5 : 0}>
+        <Box paddingX={isMd ? 5 : 0} paddingBottom={isMd ? 8 : 0}>
           <Box className={classes.navigation}>
             <Navigation />
           </Box>

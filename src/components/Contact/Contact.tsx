@@ -4,13 +4,18 @@ import {
   TextField,
   Button,
   TextFieldProps,
-  CircularProgress
+  CircularProgress,
+  IconButton,
+  useTheme,
+  useMediaQuery
 } from "@material-ui/core";
 import { useStyles } from "./Contact.styles";
 import { ArrowRightAlt, Favorite } from "@material-ui/icons";
 import { useSendEmail } from "../../utils/Email";
 import { handleChange, findError } from "../../utils/Form";
 import * as yup from "yup";
+import Img from "gatsby-image";
+import { Contact as ContactType } from "../../types/Contact";
 
 const commonProps: TextFieldProps = {
   fullWidth: true,
@@ -27,7 +32,11 @@ const schema = yup.object().shape({
   message: yup.string().required()
 });
 
-export default function Contact() {
+interface Props {
+  contacts: ContactType[];
+}
+
+export default function Contact({ contacts }: Props) {
   const classes = useStyles();
 
   const [name, setName] = useState("");
@@ -37,6 +46,9 @@ export default function Contact() {
   const [errors, setErrors] = useState<yup.ValidationError[]>([]);
 
   const [doSend, { data, loading }] = useSendEmail();
+
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.up("md"));
 
   useEffect(() => {
     setErrors([]);
@@ -112,7 +124,33 @@ export default function Contact() {
           multiline={true}
           rows={5}
         />
-        <Box display="flex" justifyContent={"flex-end"} marginX={-1}>
+        <Box
+          display="flex"
+          justifyContent={"space-between"}
+          alignItems={isMd ? "center" : "flex-end"}
+          marginX={-1}
+          flexDirection={isMd ? "row" : "column-reverse"}
+        >
+          <Box display="flex" justifyContent={"flex-end"} marginX={-1}>
+            {contacts.map((contact, key) => (
+              <IconButton
+                component="a"
+                target="_blank"
+                href={contact.link}
+                title={contact.title}
+                key={key}
+              >
+                <Img
+                  fluid={contact.icon}
+                  className={classes.contactIcon}
+                  alt={contact.title}
+                  imgStyle={{
+                    objectFit: "contain"
+                  }}
+                />
+              </IconButton>
+            ))}
+          </Box>
           <Button
             variant="text"
             color="primary"

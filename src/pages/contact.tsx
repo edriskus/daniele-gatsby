@@ -15,6 +15,34 @@ const query = graphql`
         }
       }
     }
+    FBIcon: file(relativePath: { eq: "FB.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    IGIcon: file(relativePath: { eq: "IG.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    BehanceIcon: file(relativePath: { eq: "Behance.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    LinkedInIcon: file(relativePath: { eq: "LinkedIn.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `;
 
@@ -39,7 +67,32 @@ export default function() {
           So, the last thing - if you are impressed with my works, you can leave me a message. 
           “I’ll be there for YOU! :)”
         `}
-        featured={<Contact />}
+        featured={
+          <Contact
+            contacts={[
+              {
+                title: "Facebook",
+                icon: data?.FBIcon?.childImageSharp?.fluid,
+                link: "https://www.facebook.com/danielekrauze31"
+              },
+              {
+                title: "Instagram",
+                icon: data?.IGIcon?.childImageSharp?.fluid,
+                link: "https://www.instagram.com/danielekrau/"
+              },
+              {
+                title: "Behance",
+                icon: data?.BehanceIcon?.childImageSharp?.fluid,
+                link: "https://www.behance.net/danielkrauze"
+              },
+              {
+                title: "LinkedIn",
+                icon: data?.LinkedInIcon?.childImageSharp?.fluid,
+                link: "http://linkedin.com/in/daniel%C4%97-krauze-66475311a"
+              }
+            ]}
+          />
+        }
       />
     </Layout>
   );

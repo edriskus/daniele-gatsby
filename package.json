@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-krauze",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "...",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Edmundas Riskus <emdundas@riskus.lt>",
   "dependencies": {
     "@material-ui/core": "^4.9.8",
     "@material-ui/icons": "^4.9.1",
