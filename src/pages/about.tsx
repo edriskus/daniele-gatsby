@@ -23,7 +23,6 @@ const query = graphql`
 
 export default function() {
   const data = useStaticQuery(query);
-  console.log(data?.danieleImage?.childImageSharp);
   return (
     <Layout>
       <SEO
