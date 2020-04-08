@@ -10,35 +10,35 @@ const query = graphql`
   query {
     birdsImage: file(relativePath: { eq: "birds.jpeg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxHeight: 2240) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     FBIcon: file(relativePath: { eq: "FB.png" }) {
       childImageSharp {
-        fluid {
+        fluid(maxHeight: 72) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     IGIcon: file(relativePath: { eq: "IG.png" }) {
       childImageSharp {
-        fluid {
+        fluid(maxHeight: 72) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     BehanceIcon: file(relativePath: { eq: "Behance.png" }) {
       childImageSharp {
-        fluid {
+        fluid(maxHeight: 72) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     LinkedInIcon: file(relativePath: { eq: "LinkedIn.png" }) {
       childImageSharp {
-        fluid {
+        fluid(maxHeight: 72) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -9,7 +9,7 @@ const query = graphql`
   query {
     sandImage: file(relativePath: { eq: "sand.jpeg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxHeight: 2240) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -13,7 +13,7 @@ const query = graphql`
   query {
     danieleImage: file(relativePath: { eq: "daniele.jpeg" }) {
       childImageSharp {
-        fluid {
+        fluid(maxHeight: 2240) {
           ...GatsbyImageSharpFluid
         }
       }
