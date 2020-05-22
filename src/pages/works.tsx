@@ -52,6 +52,17 @@ const works: Work[] = [
       The web app is responsive for all three types of devices - mobile, tablet and desktop. 
       The design was created using mobile-first principle. 
     `
+  },
+  {
+    title: "Postus",
+    type: "Web App",
+    link: "/pdfs/PostUs-Presentation.pdf",
+    subtitle: "A Web App for easier parcel tracking and sending",
+    cover: "postus",
+    story: `
+      The main goal was to analyse and redesign one of the most popular parcel sending and tracking systems in my country. 
+      Original system is an ideal example of unfriendly UX/UI design. 
+    `
   }
 ];
 
@@ -72,6 +83,13 @@ const query = graphql`
       }
     }
     quaractive: file(relativePath: { eq: "quaractive.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    postus: file(relativePath: { eq: "postus.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
