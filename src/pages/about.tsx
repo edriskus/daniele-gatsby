@@ -62,7 +62,7 @@ export default function() {
           <Timeline
             events={[
               {
-                date: "2019-2021",
+                date: "2019-Current",
                 title: "Master’s Student of Engineering and Computer Graphics",
                 story: "Vilniaus Gediminas Technical University"
               },
@@ -76,13 +76,22 @@ export default function() {
         </Section>
         <Section title="experience">
           <Post
+            title="UI/UX Designer"
+            tags={["Tesonet", "Full time", "2020 - Current"]}
+            story={`
+              Currently, I am working as a UI/UX Designer in a Cybersecurity and IT solutions company - Tesonet. 
+              My responsibilities as a UI/UX designer are application prototyping, user flow design and UI element creation, 
+              as well ascross-platform application design.
+            `}
+          />
+          <Post
             title="Graphic Designer"
             tags={["Teltonika", "Full time", "2019 - Current"]}
             story={`
-              Currently, I am working as a Graphic Designer in one of the biggest IoT companies of Lithuania - Teltonika. 
+              I was working as a Graphic Designer in one of the biggest IoT companies of Lithuania - Teltonika. 
               During this time, I’ve done various projects - from exhibition booth designs to web prototypes. 
               I've also designed banners, datasheets, catalogues, drawings of topologies, icons and illustrations. 
-              Recently, I've been creating the web design of a device control system,
+              One of the largest projects was creating the web design of a device control system, 
               based on Material Design language for better user experience and accessibility.
             `}
           />
@@ -90,10 +99,10 @@ export default function() {
         <Section title="skills">
           <Skills
             skills={[
+              { type: "primary", strength: 4, title: "Figma" },
               { type: "primary", strength: 4, title: "Adobe Illustrator" },
               { type: "primary", strength: 4, title: "Adobe Photoshop" },
               { type: "primary", strength: 4, title: "Adobe Xd" },
-              { type: "primary", strength: 4, title: "Figma" },
               { type: "secondary", strength: 3, title: "Adobe InDesign" },
               { type: "secondary", strength: 3, title: "Adobe Lightroom" }
             ]}

@@ -91,14 +91,14 @@ export default function Contact({ contacts }: Props) {
     [data, doSend, email, loading, loves, message, name]
   );
 
-  const emailError = findError(errors, "email")?.message;
-  const nameError = findError(errors, "name")?.message;
-  const messageError = findError(errors, "message")?.message;
+  // const emailError = findError(errors, "email")?.message;
+  // const nameError = findError(errors, "name")?.message;
+  // const messageError = findError(errors, "message")?.message;
 
   return (
     <Box>
       <form className={classes.form} onSubmit={handleSubmit}>
-        <TextField
+        {/* <TextField
           {...commonProps}
           value={name}
           error={!!nameError}
@@ -123,10 +123,11 @@ export default function Contact({ contacts }: Props) {
           label="Message"
           multiline={true}
           rows={5}
-        />
+        /> */}
         <Box
           display="flex"
-          justifyContent={"space-between"}
+          paddingTop={2}
+          justifyContent={"flex-end"}
           alignItems={isMd ? "center" : "flex-end"}
           marginX={-1}
           flexDirection={isMd ? "row" : "column-reverse"}
@@ -151,7 +152,7 @@ export default function Contact({ contacts }: Props) {
               </IconButton>
             ))}
           </Box>
-          <Button
+          {/* <Button
             variant="text"
             color="primary"
             disabled={loading || loves >= 3}
@@ -174,7 +175,7 @@ export default function Contact({ contacts }: Props) {
                 <ArrowRightAlt />
               )}
             </Box>
-          </Button>
+          </Button> */}
         </Box>
       </form>
     </Box>
