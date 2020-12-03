@@ -29,7 +29,7 @@ const PositionListener: OverridableComponent<OverridableType> = (
     [reportPosition]
   );
 
-  useRect(ref, true, handleRect);
+  useRect(ref, { observe: true, onChange: handleRect });
 
   return <Component ref={ref} {...restProps} />;
 };

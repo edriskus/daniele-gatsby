@@ -20,11 +20,12 @@ export default function Skills({ skills }: Props) {
       <Grid container={true} spacing={2}>
         {skills.map((skill, i) => (
           <Grid item xs={12} key={i}>
-            <Grid container={true}>
-              <Grid xs={5}>
+            <Grid container>
+              <Grid item xs={5}>
                 <Box className={classes.dotsWrapper}>
-                  {skillDots(skill).map(m => (
+                  {skillDots(skill).map((m, mi) => (
                     <Box
+                      key={mi}
                       width={Math.floor(size * m)}
                       height={Math.floor(size * m)}
                       marginX={`${Math.floor(
@@ -39,7 +40,7 @@ export default function Skills({ skills }: Props) {
                   ))}
                 </Box>
               </Grid>
-              <Grid xs={7}>
+              <Grid item xs={7}>
                 <Typography
                   align="right"
                   variant={skill.type === "primary" ? "subtitle1" : "body1"}
