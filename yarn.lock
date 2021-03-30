@@ -2774,8 +2774,6 @@
   "integrity" "sha512-hC37mm7aAdEb1n8SgggG8a1QuhZapsY/XLCi4ETSH6AVjXBCWEa50CXlOsAMPPWLnSx5Ns6mzz39uvuseh0Xjg=="
   "resolved" "https://registry.npmjs.org/babel-plugin-add-module-exports/-/babel-plugin-add-module-exports-0.3.3.tgz"
   "version" "0.3.3"
-  dependencies:
-    "chokidar" "^2.0.4"
   optionalDependencies:
     "chokidar" "^2.0.4"
 
@@ -3689,7 +3687,6 @@
     "anymatch" "^2.0.0"
     "async-each" "^1.0.1"
     "braces" "^2.3.2"
-    "fsevents" "^1.2.7"
     "glob-parent" "^3.1.0"
     "inherits" "^2.0.3"
     "is-binary-path" "^1.0.0"
@@ -3708,7 +3705,6 @@
   dependencies:
     "anymatch" "~3.1.1"
     "braces" "~3.0.2"
-    "fsevents" "~2.1.2"
     "glob-parent" "~5.1.0"
     "is-binary-path" "~2.1.0"
     "is-glob" "~4.0.1"
@@ -3793,7 +3789,6 @@
   "resolved" "https://registry.npmjs.org/cli-table3/-/cli-table3-0.5.1.tgz"
   "version" "0.5.1"
   dependencies:
-    "colors" "^1.1.2"
     "object-assign" "^4.1.0"
     "string-width" "^2.1.1"
   optionalDependencies:
@@ -5537,7 +5532,6 @@
     "estraverse" "^4.2.0"
     "esutils" "^2.0.2"
     "optionator" "^0.8.1"
-    "source-map" "~0.6.1"
   optionalDependencies:
     "source-map" "~0.6.1"
 
@@ -6526,8 +6520,6 @@
   "integrity" "sha512-EL+fNbjqr+5Ghmn1rNFmKG2X1xJxregp/7dmbMfMuQjR4FqRxU76FsKiE0wT8S1q+T0Xm1eGeQzyyzUViMcSPQ=="
   "resolved" "https://registry.npmjs.org/fs-posix/-/fs-posix-6.0.0.tgz"
   "version" "6.0.0"
-  dependencies:
-    "git-win" "^2.2.4"
   optionalDependencies:
     "git-win" "^2.2.4"
 
@@ -14795,7 +14787,6 @@
     "chokidar" "^3.4.1"
     "graceful-fs" "^4.1.2"
     "neo-async" "^2.5.0"
-    "watchpack-chokidar2" "^2.0.0"
   optionalDependencies:
     "watchpack-chokidar2" "^2.0.0"
 

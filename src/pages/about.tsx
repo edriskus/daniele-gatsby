@@ -76,17 +76,8 @@ export default function() {
         </Section>
         <Section title="experience">
           <Post
-            title="UI/UX Designer"
-            tags={["Tesonet", "Full time", "2020 - Current"]}
-            story={`
-              Currently, I am working as a UI/UX Designer in a Cybersecurity and IT solutions company - Tesonet. 
-              My responsibilities as a UI/UX designer are application prototyping, user flow design and UI element creation, 
-              as well ascross-platform application design.
-            `}
-          />
-          <Post
             title="Graphic Designer"
-            tags={["Teltonika", "Full time", "2019 - Current"]}
+            tags={["Teltonika", "Full time", "2019 - 2020"]}
             story={`
               I was working as a Graphic Designer in one of the biggest IoT companies of Lithuania - Teltonika. 
               During this time, I’ve done various projects - from exhibition booth designs to web prototypes. 
