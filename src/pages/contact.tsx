@@ -57,7 +57,7 @@ export default function() {
           So, the last thing - if you are impressed with my works, you can leave me a message. 
           “I’ll be there for YOU! :)”
         `}
-        img="seo/birds.jpeg"
+        img="seo/purpleLomo.JPG"
       />
       <Blob color="grey" xsX={15} xsY={336} mdX={7} mdY={538} />
       <Hello
