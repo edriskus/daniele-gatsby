@@ -7,7 +7,7 @@ import Blob from "../components/Blob/Blob";
 
 const query = graphql`
   query {
-    sandImage: file(relativePath: { eq: "sand.jpeg" }) {
+    flowersImage: file(relativePath: { eq: "flowersLomo.JPG" }) {
       childImageSharp {
         fluid(maxHeight: 2240) {
           ...GatsbyImageSharpFluid
@@ -24,16 +24,16 @@ export default function() {
       <SEO
         title="Labas"
         url="https://daniele.krauze.lt/"
-        img="seo/sand.jpeg"
+        img="seo/flowersLomo.JPG"
         description={`
           It means "hello" in my native language - Lithuanian.
           This is my portfolio based on web designs and some graphic design elements. 
       `}
       />
-      <Blob color="lemon" xsX={15} xsY={336} mdX={7} mdY={478} />
+      <Blob color="grey" xsX={15} xsY={336} mdX={7} mdY={478} />
       <Hello
         title="labas"
-        img={data?.sandImage?.childImageSharp?.fluid}
+        img={data?.flowersImage?.childImageSharp?.fluid}
         story={`
           is the first word of my portfolio. When I talk with a person for the first time, 
           before I introduce myself, I always start with "labas". 

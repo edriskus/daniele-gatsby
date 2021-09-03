@@ -8,7 +8,7 @@ import Contact from "../components/Contact/Contact";
 
 const query = graphql`
   query {
-    birdsImage: file(relativePath: { eq: "birds.jpeg" }) {
+    birdsImage: file(relativePath: { eq: "purpleLomo.JPG" }) {
       childImageSharp {
         fluid(maxHeight: 2240) {
           ...GatsbyImageSharpFluid
@@ -59,7 +59,7 @@ export default function() {
         `}
         img="seo/birds.jpeg"
       />
-      <Blob color="lemon" xsX={15} xsY={336} mdX={7} mdY={538} />
+      <Blob color="grey" xsX={15} xsY={336} mdX={7} mdY={538} />
       <Hello
         title="contact"
         img={data?.birdsImage?.childImageSharp?.fluid}
@@ -73,23 +73,23 @@ export default function() {
               {
                 title: "Facebook",
                 icon: data?.FBIcon?.childImageSharp?.fluid,
-                link: "https://www.facebook.com/danielekrauze31"
+                link: "https://www.facebook.com/danielekrauze31",
               },
               {
                 title: "Instagram",
                 icon: data?.IGIcon?.childImageSharp?.fluid,
-                link: "https://www.instagram.com/danielekrau/"
+                link: "https://www.instagram.com/danielekrau/",
               },
               {
                 title: "Behance",
                 icon: data?.BehanceIcon?.childImageSharp?.fluid,
-                link: "https://www.behance.net/danielkrauze"
+                link: "https://www.behance.net/danielkrauze",
               },
               {
                 title: "LinkedIn",
                 icon: data?.LinkedInIcon?.childImageSharp?.fluid,
-                link: "http://linkedin.com/in/daniel%C4%97-krauze-66475311a"
-              }
+                link: "https://www.linkedin.com/in/daniel%C4%97-ri%C5%A1k%C4%97-66475311a/",
+              },
             ]}
           />
         }

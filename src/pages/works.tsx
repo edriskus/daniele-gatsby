@@ -12,23 +12,32 @@ import { useTheme, useMediaQuery, Box } from "@material-ui/core";
 
 const works: Work[] = [
   {
+    title: "Postus",
+    type: "Web App",
+    link: "/pdfs/PostUs.pdf",
+    subtitle: "A Web App for easier parcel tracking and sending",
+    cover: "postus",
+    story: `
+      The main goal was to analyse and redesign one of the most popular parcel sending and tracking systems in my country. 
+      Original system is an ideal example of unfriendly UX/UI design. 
+    `,
+  },
+  {
     title: "OmNiam",
     type: "Mobile App",
     link: "/pdfs/OmNiam-Presentation.pdf",
-    subtitle:
-      "OnNiam - clear solution to find, try and share recipes in a couple of taps.",
+    subtitle: "OnNiam - clear solution to find, try and share recipes in a couple of taps.",
     cover: "omniamMobile",
     story: `
       The main goal was to design a clean looking mobile application, using Material UI specifications. 
       In this app You can explore and share your favourite recipes.
-    `
+    `,
   },
   {
-    title: "OmNiam",
+    title: "NiamAdmin",
     type: "Admin Panel",
     link: "/pdfs/OmNiam-AdminPanel-Presentation.pdf",
-    subtitle:
-      "OnNiam - clear solution to find, try and share recipes in a couple of taps.",
+    subtitle: "OnNiam - clear solution to find, try and share recipes in a couple of taps.",
     cover: "omniamAdmin",
     story: `
       The main goal was to learn how to design more difficult web systems like admin panel. 
@@ -36,34 +45,19 @@ const works: Work[] = [
       This admin panel has two colour modes - dark and light. 
       The mode depends on OS colour mode which user is using. 
       Also, user can change mode manually.
-    `
+    `,
   },
   {
-    title: "Quaractive",
-    type: "Web App",
-    link: "https://www.quaractive.com/",
-    subtitle:
-      "A web app that helps to maintain mental health, daily routines and stay socially connected",
-    cover: "quaractive",
+    title: "Surfshark",
+    type: "Product design examples",
+    link: "/pdfs/Surfshark.pdf",
+    subtitle: "Some examples of my current work at Surfshark.",
+    cover: "surfshark",
     story: `
-      This web app was created during online hackathon - Hack the Crisis, which took place in 20 - 22nd of March. 
-      The main goal of this app was to help users to maintain heir mental health, 
-      daily routines and stay connected to their social circles in a fun and positive way even during quarantine. 
-      The web app is responsive for all three types of devices - mobile, tablet and desktop. 
-      The design was created using mobile-first principle. 
-    `
+      During  this time, I’ve done various projects. There is just a couple of examples of them - 
+      Windows Antivirus and Widgets for iOS and Android platforms.
+    `,
   },
-  {
-    title: "Postus",
-    type: "Web App",
-    link: "/pdfs/PostUs-Presentation.pdf",
-    subtitle: "A Web App for easier parcel tracking and sending",
-    cover: "postus",
-    story: `
-      The main goal was to analyse and redesign one of the most popular parcel sending and tracking systems in my country. 
-      Original system is an ideal example of unfriendly UX/UI design. 
-    `
-  }
 ];
 
 const query = graphql`
@@ -82,14 +76,14 @@ const query = graphql`
         }
       }
     }
-    quaractive: file(relativePath: { eq: "quaractive.png" }) {
+    surfshark: file(relativePath: { eq: "Surfshark.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    postus: file(relativePath: { eq: "postus.png" }) {
+    postus: file(relativePath: { eq: "PostUs1.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -103,16 +97,14 @@ const memoShowcase = memo(Showcase);
 
 export default function() {
   const data = useStaticQuery(query);
-  const [closestImage, setClosestImage] = useState<string>(
-    works[0]?.cover ?? ""
-  );
+  const [closestImage, setClosestImage] = useState<string>(works[0]?.cover ?? "");
   const imagePositions = useRef<Record<string, number>>({});
 
   const handleWorkPosition = useCallback(
     (work: Work) => (position: number) => {
       if (Object.keys(imagePositions.current).length >= works.length) {
         imagePositions.current = {
-          [work.cover]: position
+          [work.cover]: position,
         };
       } else {
         imagePositions.current[work.cover] = position;
@@ -121,10 +113,7 @@ export default function() {
           const closest = Object.keys(imagePositions.current).reduce(
             (prev, key) => {
               const value = imagePositions.current[key];
-              return prev.value !== null &&
-                Math.abs(value - midpoint) > Math.abs(prev.value - midpoint)
-                ? prev
-                : { key, value };
+              return prev.value !== null && Math.abs(value - midpoint) > Math.abs(prev.value - midpoint) ? prev : { key, value };
             },
             { key: "", value: null }
           );
@@ -147,11 +136,11 @@ export default function() {
           I am really interested in web design, 
           especially the latest trends of graphic elements, colours and design systems. 
       `}
-        img="seo/omniamMobile.jpeg"
+        img="seo/PostUs1.png"
       />
-      <Blob color="lips" xsX={87} xsY={363} mdX={40} mdY={146} />
-      <Blob color="sea" xsX={15} xsY={981} mdX={7} mdY={1078} />
-      <Blob color="lemon" xsX={90} xsY={2245} mdX={43} mdY={1682} />
+      <Blob color="darkGrey" xsX={87} xsY={363} mdX={40} mdY={146} />
+      <Blob color="grey" xsX={15} xsY={981} mdX={7} mdY={1078} />
+      <Blob color="lightGrey" xsX={90} xsY={2245} mdX={43} mdY={1682} />
       <Hello
         title="works"
         bottomNavigation={true}
@@ -168,16 +157,7 @@ export default function() {
         {works.map((work, i) => (
           <Box paddingTop={isMd ? 10 : 0} key={i}>
             <Section title={work.title}>
-              <PositionListener
-                reportPosition={handleWorkPosition(work)}
-                component={memoShowcase}
-                title={work.title}
-                type={work.type}
-                link={work.link}
-                subtitle={work.subtitle}
-                img={data?.[work.cover]?.childImageSharp?.fluid}
-                story={work.story}
-              />
+              <PositionListener reportPosition={handleWorkPosition(work)} component={memoShowcase} title={work.title} type={work.type} link={work.link} subtitle={work.subtitle} img={data?.[work.cover]?.childImageSharp?.fluid} story={work.story} />
             </Section>
           </Box>
         ))}

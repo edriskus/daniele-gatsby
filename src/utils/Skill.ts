@@ -1,8 +1,8 @@
 import { Skill } from "../types/Skill";
 
-export function skillDots(skill: Skill): number[] {
+export function skillDots(skill: Skill): boolean[] {
   return new Array(5).fill(1).map((size, i) => {
     const modifier = 5 - skill.strength - i;
-    return 1 - (modifier > 0 ? Math.sqrt(modifier) : 0) * 0.4;
+    return modifier <= 0;
   });
 }

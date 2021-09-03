@@ -8,7 +8,7 @@ export default function() {
   return (
     <Layout>
       <SEO title="404 - Not Found" />
-      <Blob color="lemon" xsX={15} xsY={336} mdX={7} mdY={538} />
+      <Blob color="grey" xsX={15} xsY={336} mdX={7} mdY={538} />
       <Hello
         title="404"
         story={`

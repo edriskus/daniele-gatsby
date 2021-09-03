@@ -10,7 +10,7 @@ interface Props {
 
 export default function Post({ title, story, tags }: Props) {
   return (
-    <Box>
+    <Box paddingBottom={4}>
       <Typography variant="h4" align="right" color="primary">
         {title}
       </Typography>

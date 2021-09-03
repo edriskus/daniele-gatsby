@@ -11,7 +11,7 @@ import Skills from "../components/Skills/Skills";
 
 const query = graphql`
   query {
-    danieleImage: file(relativePath: { eq: "daniele.jpeg" }) {
+    danieleImage: file(relativePath: { eq: "danieleLomo.JPG" }) {
       childImageSharp {
         fluid(maxHeight: 2240) {
           ...GatsbyImageSharpFluid
@@ -27,7 +27,7 @@ export default function() {
     <Layout>
       <SEO
         title="About"
-        img="seo/daniele.jpeg"
+        img="seo/danieleLomo.JPG"
         url="https://daniele.krauze.lt/about/"
         description={`
           Okay, my name is Danielė. 
@@ -35,9 +35,9 @@ export default function() {
           Music, web and Graphic design.  
       `}
       />
-      <Blob color="sea" xsX={87} xsY={35} mdX={40} mdY={146} />
-      <Blob color="lips" xsX={15} xsY={1148} mdX={7} mdY={1230} />
-      <Blob color="lemon" xsX={90} xsY={1749} mdX={43} mdY={1804} />
+      <Blob color="lightGrey" xsX={87} xsY={35} mdX={40} mdY={146} />
+      <Blob color="darkGrey" xsX={15} xsY={1148} mdX={7} mdY={1230} />
+      <Blob color="grey" xsX={90} xsY={1749} mdX={43} mdY={1804} />
       <Hello
         title="Danielė"
         bottomNavigation={true}
@@ -64,20 +64,32 @@ export default function() {
               {
                 date: "2019-Current",
                 title: "Master’s Student of Engineering and Computer Graphics",
-                story: "Vilniaus Gediminas Technical University"
+                story: "Vilniaus Gediminas Technical University",
               },
               {
                 date: "2015-2019",
                 title: "Bachelor’s degree of Bioengineering",
-                story: "Vilniaus Gediminas Technical University"
-              }
+                story: "Vilniaus Gediminas Technical University",
+              },
             ]}
           />
         </Section>
         <Section title="experience">
           <Post
+            title="UI/UX Designer"
+            tags={["Surfshark", "2020 - Now"]}
+            story={`
+              Currently, I'm working in Surfshark which is one of the best-known cybersecurity products in the world. 
+              I have experience working with cross-platform apps because our product is compatible with different operating systems - 
+              iOS, macOS, Android, Windows, Android TV and extensions of browsers (Such as Google Chrome and Mozilla Firefox). 
+              Also, I'm working with the Growth marketing team, whose biggest goal is users retention. 
+              During this time I've done various projects, for example - iOS and Android widgets, notification centre, 
+              Antivirus in Windows, extension redesign, components libraries for our design files and etc.
+            `}
+          />
+          <Post
             title="Graphic Designer"
-            tags={["Teltonika", "Full time", "2019 - 2020"]}
+            tags={["Teltonika", "2019 - 2020"]}
             story={`
               I was working as a Graphic Designer in one of the biggest IoT companies of Lithuania - Teltonika. 
               During this time, I’ve done various projects - from exhibition booth designs to web prototypes. 
@@ -91,11 +103,11 @@ export default function() {
           <Skills
             skills={[
               { type: "primary", strength: 4, title: "Figma" },
+              { type: "primary", strength: 4, title: "Adobe Xd" },
               { type: "primary", strength: 4, title: "Adobe Illustrator" },
               { type: "primary", strength: 4, title: "Adobe Photoshop" },
-              { type: "primary", strength: 4, title: "Adobe Xd" },
-              { type: "secondary", strength: 3, title: "Adobe InDesign" },
-              { type: "secondary", strength: 3, title: "Adobe Lightroom" }
+              { type: "primary", strength: 4, title: "Adobe Lightroom" },
+              { type: "primary", strength: 3, title: "Procreate" },
             ]}
           />
         </Section>

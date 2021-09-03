@@ -8,23 +8,23 @@ const links = [
   {
     to: "/",
     title: "home",
-    bg: "#F9DF82"
+    bg: "#A43482", /// "#F9DF82"
   },
   {
     to: "/about/",
     title: "about",
-    bg: "#4E9CB5"
+    bg: "#A43482", /// "#4E9CB5"
   },
   {
     to: "/works/",
     title: "works",
-    bg: "#FF4040"
+    bg: "#A43482", /// "#FF4040"
   },
   {
     to: "/contact/",
     title: "contact",
-    bg: "#F9DF82"
-  }
+    bg: "#A43482", /// "#F9DF82"
+  },
 ];
 
 export default function Navigation() {
@@ -38,16 +38,7 @@ export default function Navigation() {
         {links.map((link, i) => (
           <Grid item={true} key={i}>
             <Box paddingX={1}>
-              <Button
-                component={AniRefButton}
-                paintDrip={true}
-                duration={isMd ? 0.6 : 0.4}
-                hex={link.bg}
-                to={link.to}
-                variant="text"
-                color="default"
-                activeClassName={classes.active}
-              >
+              <Button component={AniRefButton} paintDrip={true} duration={isMd ? 0.6 : 0.4} hex={link.bg} to={link.to} variant="text" color="default" activeClassName={classes.active}>
                 {link.title}
               </Button>
             </Box>

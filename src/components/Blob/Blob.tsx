@@ -11,17 +11,10 @@ interface Props {
   mdX: number; // Percent
   mdY: number;
   parallax?: number;
-  color: "sea" | "lips" | "lemon";
+  color: "grey" | "lightGrey" | "darkGrey"; // "lightGrey" | "darkGrey" | "grey";
 }
 
-export default function Blob({
-  color,
-  xsX,
-  xsY,
-  mdX,
-  mdY,
-  parallax = 50
-}: Props) {
+export default function Blob({ color, xsX, xsY, mdX, mdY, parallax = 50 }: Props) {
   const classes = useStyles();
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up("md"));
@@ -29,25 +22,18 @@ export default function Blob({
 
   const y = isMd ? mdY : xsY;
 
-  const lgX = `calc((100vw - ${theme.breakpoints.values.lg}px) / 2 + ${(theme
-    .breakpoints.values.lg /
-    100) *
-    mdX}px)`;
+  const lgX = `calc((100vw - ${theme.breakpoints.values.lg}px) / 2 + ${(theme.breakpoints.values.lg / 100) * mdX}px)`;
 
   const x = isMd ? (isLg ? lgX : `${mdX}vw`) : `${xsX}vw`;
 
   return (
-    <Box
-      className={classes.wrapper}
-      top={y}
-      left={`calc(${x} - ${isMd ? 315 / 2 : 193 / 2}px)`}
-    >
+    <Box className={classes.wrapper} top={y} left={`calc(${x} - ${isMd ? 315 / 2 : 193 / 2}px)`}>
       <Parallax y={[-parallax, parallax]}>
         <Box
           className={clsx(classes.blob, {
-            [classes.lemon]: color === "lemon",
-            [classes.lips]: color === "lips",
-            [classes.sea]: color === "sea"
+            [classes.lightGrey]: color === "lightGrey",
+            [classes.grey]: color === "grey",
+            [classes.darkGrey]: color === "darkGrey",
           })}
         />
       </Parallax>

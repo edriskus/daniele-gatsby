@@ -15,6 +15,7 @@ export default function Skills({ skills }: Props) {
   const isMd = useMediaQuery(theme.breakpoints.up("md"));
   const classes = useStyles();
   const size = isMd ? 20 : 12;
+  const sizeInactive = size * 0.6;
   return (
     <Box paddingTop={2} paddingBottom={3}>
       <Grid container={true} spacing={2}>
@@ -26,25 +27,20 @@ export default function Skills({ skills }: Props) {
                   {skillDots(skill).map((m, mi) => (
                     <Box
                       key={mi}
-                      width={Math.floor(size * m)}
-                      height={Math.floor(size * m)}
-                      marginX={`${Math.floor(
-                        (size * 1.5 - Math.floor(size * m)) / 2
-                      )}px`}
-                      style={{ opacity: m }}
+                      width={m ? size : sizeInactive}
+                      height={m ? size : sizeInactive}
+                      marginX={`${Math.floor((size * 1.5 - Math.floor(m ? size : sizeInactive)) / 2)}px`}
                       className={clsx({
                         [classes.primaryDot]: skill.type === "primary",
-                        [classes.secondaryDot]: skill.type === "secondary"
+                        [classes.secondaryDot]: skill.type === "secondary",
+                        [classes.inactiveDot]: !m,
                       })}
                     />
                   ))}
                 </Box>
               </Grid>
               <Grid item xs={7}>
-                <Typography
-                  align="right"
-                  variant={skill.type === "primary" ? "subtitle1" : "body1"}
-                >
+                <Typography align="right" variant={skill.type === "primary" ? "subtitle1" : "body1"}>
                   {skill.title}
                 </Typography>
               </Grid>

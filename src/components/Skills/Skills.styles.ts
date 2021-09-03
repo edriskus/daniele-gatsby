@@ -6,14 +6,20 @@ export const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center",
-    height: "100%"
+    height: "100%",
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "flex-start",
+    },
   },
   primaryDot: {
     backgroundColor: theme.palette.primary.main,
-    borderRadius: "50%"
+    borderRadius: "50%",
   },
   secondaryDot: {
     backgroundColor: theme.palette.secondary.main,
-    borderRadius: "50%"
-  }
+    borderRadius: "50%",
+  },
+  inactiveDot: {
+    backgroundColor: "rgba(216, 216, 216, 1)",
+  },
 }));
