@@ -151,7 +151,7 @@ export default function() {
           especially the latest trends of graphic elements, colours and design systems. 
           Also, I just love when websites are user friendly. 
           <br/><br/>
-          All of my personal projects (which you will find below) are created using the Material Dasign language.
+          All of my personal projects (which you will find below) are created using the Material Design language.
         `}
       >
         {works.map((work, i) => (
