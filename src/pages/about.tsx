@@ -75,11 +75,20 @@ export default function() {
           />
         </Section>
         <Section title="experience">
+        <Post
+            title="UX Specialist"
+            tags={["Mediapark", "2021 Oct - Now"]}
+            story={`
+            Currently, I’m working as UX Designer in Mediapark which is digital solutions company.
+            Here I’m working with various clients and projects. Also, I’ve gained some skills working with
+            Axure application which is intended for detailed prototypes.
+            `}
+          />
           <Post
             title="UI/UX Designer"
-            tags={["Surfshark", "2020 - Now"]}
+            tags={["Surfshark", "2020 Aug - 2021 Oct"]}
             story={`
-              Currently, I'm working in Surfshark which is one of the best-known cybersecurity products in the world. 
+              I was working in Surfshark which is one of the best-known cybersecurity products in the world. 
               I have experience working with cross-platform apps because our product is compatible with different operating systems - 
               iOS, macOS, Android, Windows, Android TV and extensions of browsers (Such as Google Chrome and Mozilla Firefox). 
               Also, I'm working with the Growth marketing team, whose biggest goal is users retention. 
@@ -89,7 +98,7 @@ export default function() {
           />
           <Post
             title="Graphic Designer"
-            tags={["Teltonika", "2019 - 2020"]}
+            tags={["Teltonika", "2019 Mar - 2020 Aug"]}
             story={`
               I was working as a Graphic Designer in one of the biggest IoT companies of Lithuania - Teltonika. 
               During this time, I’ve done various projects - from exhibition booth designs to web prototypes. 
@@ -107,7 +116,7 @@ export default function() {
               { type: "primary", strength: 4, title: "Adobe Illustrator" },
               { type: "primary", strength: 4, title: "Adobe Photoshop" },
               { type: "primary", strength: 4, title: "Adobe Lightroom" },
-              { type: "primary", strength: 3, title: "Procreate" },
+              { type: "primary", strength: 2, title: "Axure" },
             ]}
           />
         </Section>
